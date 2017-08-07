@@ -30,4 +30,22 @@ public class MovieTest {
     public void testCanConstructWithRanking(){
         assertEquals( 2, aliens.getRanking() );
     }
+
+    @Test
+    public void testCanSetRanking(){
+        alien.setRanking( 1 );
+        assertEquals( 1, alien.getRanking() );
+    }
+
+    @Test
+    public void testCanGetGenre(){
+        assertEquals( "Sci-Fi", aliens.getGenre() );
+    }
+
+    @Test
+    public void testCanSetGenre(){
+        alien.setGenre( "Historical Romance" );
+        assertEquals( "Historical Romance", alien.getGenre() );
+    }
+
 }
