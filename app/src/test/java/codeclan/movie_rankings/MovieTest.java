@@ -13,10 +13,12 @@ import static org.junit.Assert.assertNull;
 public class MovieTest {
 
     Movie alien;
+    Movie aliens;
 
     @Before
     public void before(){
-        alien = new Movie( "Alien", "Sci-fi" );
+        alien = new Movie( "Alien", "Sci-Fi" );
+        aliens = new Movie( "Aliens", "Sci-Fi", 2 );
     }
 
     @Test
@@ -24,4 +26,8 @@ public class MovieTest {
         assertEquals( 0, alien.getRanking() );
     }
 
+    @Test
+    public void testCanConstructWithRanking(){
+        assertEquals( 2, aliens.getRanking() );
+    }
 }
