@@ -8,14 +8,14 @@ public class Movie {
 
     String title;
     String genre;
-    int ranking;
+    Integer ranking;
 
     public Movie( String title, String genre ){
         this.title = title;
         this.genre = genre;
     }
 
-    public Movie( String title, String genre, int ranking){
+    public Movie( String title, String genre, Integer ranking){
         this.title = title;
         this.genre = genre;
         this.ranking = ranking;
@@ -37,11 +37,16 @@ public class Movie {
         this.genre = newGenre;
     }
 
-    public int getRanking(){
+    public Integer getRanking(){
         return this.ranking;
     }
 
-    public void setRanking( int newRanking ){
+    public void setRanking( Integer newRanking ){
         this.ranking = newRanking;
+    }
+
+    @Override
+    public String toString(){
+        return "Title: '" + this.title + "', Genre: " + this.genre + ", Ranking: " + this.ranking.toString();
     }
 }

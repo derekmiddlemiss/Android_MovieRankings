@@ -23,18 +23,20 @@ public class MovieTest {
 
     @Test
     public void testCanConstructWithoutRanking(){
-        assertEquals( 0, alien.getRanking() );
+        assertNull( alien.getRanking() );
     }
 
     @Test
     public void testCanConstructWithRanking(){
-        assertEquals( 2, aliens.getRanking() );
+        Integer expected = 2;
+        assertEquals( expected, aliens.getRanking() );
     }
 
     @Test
     public void testCanSetRanking(){
         alien.setRanking( 1 );
-        assertEquals( 1, alien.getRanking() );
+        Integer expected = 1;
+        assertEquals( expected, alien.getRanking() );
     }
 
     @Test
@@ -57,6 +59,12 @@ public class MovieTest {
     public void testCanSetTitle(){
         alien.setTitle( "How to Win Friends and Influence People" );
         assertEquals( "How to Win Friends and Influence People", alien.getTitle() );
+    }
+
+    @Test
+    public void testOveriddenStringMethod(){
+        String returned = aliens.toString();
+        assertEquals( "Title: 'Aliens', Genre: Sci-Fi, Ranking: 2", aliens.toString() );
     }
 
 }
