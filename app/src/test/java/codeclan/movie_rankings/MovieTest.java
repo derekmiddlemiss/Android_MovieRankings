@@ -48,4 +48,15 @@ public class MovieTest {
         assertEquals( "Historical Romance", alien.getGenre() );
     }
 
+    @Test
+    public void testCanGetTitle(){
+        assertEquals( "Alien", alien.getTitle() );
+    }
+
+    @Test
+    public void testCanSetTitle(){
+        alien.setTitle( "How to Win Friends and Influence People" );
+        assertEquals( "How to Win Friends and Influence People", alien.getTitle() );
+    }
+
 }
